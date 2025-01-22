@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "4f48ffab-d5ff-4b69-a922-c7ace6db2a77",
+		"name": "ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40799610"
+	},
+	"item": [
+		{
+			"name": "product_update_gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"productid\": \"P006\",\n  \"productname\": \"iPhone\",\n  \"description\": \"iPhone 16 Pro\",\n  \"price\": 150000\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8072/product-catalog-service/api/v1/products/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"product-catalog-service",
+						"api",
+						"v1",
+						"products",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductById_gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8072/product-catalog-service/api/v1/products/P001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"product-catalog-service",
+						"api",
+						"v1",
+						"products",
+						"P001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllProducts_gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8072/product-catalog-service/api/v1/products/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"product-catalog-service",
+						"api",
+						"v1",
+						"products",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrderById_gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8072/ecom-order-service/api/v1/orders/OD001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"ecom-order-service",
+						"api",
+						"v1",
+						"orders",
+						"OD001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllOrders_gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8072/ecom-order-service/api/v1/orders/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"ecom-order-service",
+						"api",
+						"v1",
+						"orders",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPayments_gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8072/ecom-payment-service/api/v1/payments/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"ecom-payment-service",
+						"api",
+						"v1",
+						"payments",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllOrderDetails_APICompositorWithErrorHandling",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8072/ecom-compositor-service/api/v1/compositor/allOrders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"ecom-compositor-service",
+						"api",
+						"v1",
+						"compositor",
+						"allOrders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchAllOrderDetails_ApiCompositor_WithoutErrorHandling",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8072/ecom-compositor-service/api/v1/compositor/allOrderDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"ecom-compositor-service",
+						"api",
+						"v1",
+						"compositor",
+						"allOrderDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "placeOrder_gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"orderId\": null,\n  \"customerId\": \"C001\",\n  \"productId\": \"P001\",\n  \"quantity\": 200,\n  \"orderStatus\": null\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8072/ecom-order-service/api/v1/orders/placeorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"ecom-order-service",
+						"api",
+						"v1",
+						"orders",
+						"placeorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inventory_update_gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"inventoryId\": \"I004\",\n  \"productId\": \"P002\",\n  \"quantity\": 15\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8072/ecom-inventory-service/api/v1/inventory/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"ecom-inventory-service",
+						"api",
+						"v1",
+						"inventory",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer_update_gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customerId\": \"C001\",\n  \"customerName\": \"Divya\",\n  \"email\": \"divz@123.com\",\n  \"phone\": \"78956789\",\n  \"address\": \"Cochin\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8072/ecom-customer-service/api/v1/customers/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"ecom-customer-service",
+						"api",
+						"v1",
+						"customers",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payment_update_gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"paymentId\": \"P002\",\n  \"customerId\": \"C002\",\n  \"orderId\": \"ORDER001\",\n  \"amount\": \"15000\",\n  \"paymentStatus\": \"Pending\",\n  \"paymentMethod\": \"credit card\"\n    \n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8072/ecom-payment-service/api/v1/payments/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"ecom-payment-service",
+						"api",
+						"v1",
+						"payments",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product_update_localhost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"productid\": \"P004\",\n  \"productname\": \"Mobile Phone\",\n  \"description\": \"Vivo V 40\",\n  \"price\": 100\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/v1/products/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
